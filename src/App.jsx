@@ -10,6 +10,7 @@ import Practice from './pages/Practice'
 import ProblemSolver from './pages/ProblemSolver' 
 import Failures from './pages/Failures'
 import Insights from './pages/Insights'
+import Recommendations from './pages/Recommendations'
 const App = () => {
   return (
     <Routes>
@@ -19,14 +20,14 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
-    <Route path="/practice" element={<Insights  />} />
+    <Route path="/practice" element={<Recommendations  />} />
 
       {/* Protected Routes */}
       <Route element={<ProtectedRoute />}>
   <Route element={<DashboardLayout />}>
     <Route path="/dashboard" element={<Dashboard />} />
 
-  <Route path="/practice" element={<Practice />} />
+  <Route path="/practice" element={<Insights />} />
       <Route
       path="/practice/:id"
       element={<ProblemSolver />}
@@ -38,7 +39,7 @@ const App = () => {
 
     <Route
       path="/recommendations"
-      element={<h1>Recommendations</h1>}
+      element={<Recommendations />}
     />
 
     <Route
