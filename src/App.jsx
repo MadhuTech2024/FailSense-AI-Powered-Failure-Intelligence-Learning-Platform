@@ -11,6 +11,7 @@ import ProblemSolver from './pages/ProblemSolver'
 import Failures from './pages/Failures'
 import Insights from './pages/Insights'
 import Recommendations from './pages/Recommendations'
+import Profile from './pages/Profile'
 const App = () => {
   return (
     <Routes>
@@ -20,7 +21,7 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
-    <Route path="/practice" element={<Recommendations  />} />
+    <Route path="/practice" element={<Profile />} />
 
       {/* Protected Routes */}
       <Route element={<ProtectedRoute />}>
@@ -44,7 +45,7 @@ const App = () => {
 
     <Route
       path="/profile"
-      element={<h1>Profile</h1>}
+      element={<Profile />}
     />
   </Route>
 </Route>
