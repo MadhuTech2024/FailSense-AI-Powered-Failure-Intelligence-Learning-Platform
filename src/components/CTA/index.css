@@ -1,0 +1,860 @@
+.cta-section {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 0 55px;
+  background: #f8fafc;
+}
+
+/* --------------------------------
+   BACKGROUND
+-------------------------------- */
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 15% 35%,
+      rgba(99, 102, 241, 0.07),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 65%,
+      rgba(168, 85, 247, 0.07),
+      transparent 28%
+    );
+  pointer-events: none;
+}
+
+.cta-orb {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+.cta-orb-one {
+  top: 10%;
+  left: -300px;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.cta-orb-two {
+  right: -300px;
+  bottom: 0;
+  background: rgba(168, 85, 247, 0.07);
+}
+
+.cta-container {
+  position: relative;
+  z-index: 2;
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* --------------------------------
+   LABEL
+-------------------------------- */
+
+.cta-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 35px;
+  color: #6366f1;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.cta-label-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6366f1;
+  box-shadow: 0 0 14px rgba(99, 102, 241, 0.8);
+  animation: ctaDotPulse 2s ease-in-out infinite;
+}
+
+/* --------------------------------
+   MAIN
+-------------------------------- */
+
+.cta-main {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  min-height: 680px;
+  overflow: hidden;
+  border: 1px solid #1e293b;
+  border-radius: 34px;
+  background:
+    radial-gradient(
+      circle at 70% 45%,
+      rgba(99, 102, 241, 0.14),
+      transparent 30%
+    ),
+    #080d18;
+  box-shadow:
+    0 50px 120px rgba(15, 23, 42, 0.2),
+    inset 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* --------------------------------
+   CONTENT
+-------------------------------- */
+
+.cta-content {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 75px 40px 75px 65px;
+}
+
+.cta-number {
+  margin-bottom: 24px;
+  color: #334155;
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.cta-content h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: clamp(45px, 5vw, 70px);
+  line-height: 0.96;
+  letter-spacing: -4px;
+  font-weight: 750;
+}
+
+.cta-content h2 span {
+  background: linear-gradient(
+    100deg,
+    #818cf8,
+    #a78bfa,
+    #c084fc
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta-content > p {
+  max-width: 470px;
+  margin: 30px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* --------------------------------
+   ACTIONS
+-------------------------------- */
+
+.cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 7px 7px 7px 20px;
+  border: 1px solid rgba(165, 180, 252, 0.2);
+  border-radius: 9px;
+  background: #6366f1;
+  color: white;
+  font-size: 11px;
+  font-weight: 750;
+  text-decoration: none;
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.25);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.cta-primary span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.cta-primary:hover {
+  transform: translateY(-3px);
+  background: #7073f4;
+  box-shadow: 0 20px 45px rgba(99, 102, 241, 0.38);
+}
+
+.cta-secondary {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.cta-secondary:hover {
+  color: #f8fafc;
+}
+
+/* --------------------------------
+   TRUST
+-------------------------------- */
+
+.cta-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.cta-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #475569;
+  font-size: 8px;
+}
+
+.cta-trust-item svg {
+  color: #4ade80;
+}
+
+/* --------------------------------
+   VISUAL
+-------------------------------- */
+
+.cta-visual {
+  position: relative;
+  min-height: 680px;
+  overflow: hidden;
+}
+
+.cta-visual-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+  background-size: 55px 55px;
+  mask-image: radial-gradient(
+    circle at center,
+    black,
+    transparent 80%
+  );
+}
+
+/* --------------------------------
+   MAIN PRODUCT CARD
+-------------------------------- */
+
+.cta-intelligence {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  width: min(510px, 76%);
+  padding: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 20px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(30, 41, 59, 0.96),
+      rgba(9, 15, 28, 0.97)
+    );
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.4),
+    0 0 80px rgba(99, 102, 241, 0.08);
+  transform: translate(-50%, -50%) rotate(-2deg);
+  animation: ctaCardFloat 6s ease-in-out infinite;
+}
+
+/* --------------------------------
+   CARD HEADER
+-------------------------------- */
+
+.cta-intelligence-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.cta-brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(129, 140, 248, 0.2);
+  border-radius: 8px;
+  background: rgba(99, 102, 241, 0.12);
+  color: #a5b4fc;
+}
+
+.cta-brand span {
+  display: block;
+  color: #475569;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.cta-brand strong {
+  display: block;
+  margin-top: 3px;
+  color: #cbd5e1;
+  font-size: 9px;
+}
+
+.cta-live {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.cta-live span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+}
+
+/* --------------------------------
+   SCORE
+-------------------------------- */
+
+.cta-score {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.cta-score span {
+  display: block;
+  color: #64748b;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.cta-score strong {
+  display: block;
+  margin-top: 5px;
+  color: #f8fafc;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.cta-score-growth {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+  color: #4ade80;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+/* --------------------------------
+   CHART
+-------------------------------- */
+
+.cta-chart {
+  position: relative;
+  height: 150px;
+  margin-top: 18px;
+  overflow: hidden;
+}
+
+.cta-chart-lines {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cta-chart-lines span {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.cta-chart-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.cta-chart-line {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: ctaDrawChart 2.5s ease forwards;
+}
+
+.cta-chart-point {
+  fill: #c4b5fd;
+  filter: drop-shadow(0 0 8px rgba(167, 139, 250, 0.9));
+  animation: ctaPointPulse 2s ease-in-out infinite;
+}
+
+/* --------------------------------
+   INSIGHT
+-------------------------------- */
+
+.cta-insight {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 11px;
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid rgba(129, 140, 248, 0.14);
+  border-radius: 10px;
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.cta-insight-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(99, 102, 241, 0.13);
+  color: #a5b4fc;
+}
+
+.cta-insight-content span {
+  color: #818cf8;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.cta-insight-content p {
+  margin: 4px 0 0;
+  color: #cbd5e1;
+  font-size: 8px;
+}
+
+.cta-insight > svg {
+  color: #4ade80;
+}
+
+/* --------------------------------
+   METRICS
+-------------------------------- */
+
+.cta-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 18px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cta-metrics div {
+  padding-left: 15px;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cta-metrics div:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.cta-metrics span {
+  display: block;
+  color: #475569;
+  font-size: 6px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.cta-metrics strong {
+  display: block;
+  margin-top: 4px;
+  color: #cbd5e1;
+  font-size: 15px;
+}
+
+/* --------------------------------
+   FLOATING CARDS
+-------------------------------- */
+
+.cta-floating {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 13px;
+  border: 1px solid rgba(148, 163, 184, 0.13);
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.85);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+}
+
+.cta-floating-top {
+  top: 23%;
+  right: 3%;
+  animation: ctaFloatTop 5s ease-in-out infinite;
+}
+
+.cta-floating-bottom {
+  bottom: 18%;
+  left: 4%;
+  animation: ctaFloatBottom 5.5s ease-in-out infinite;
+}
+
+.cta-floating-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 29px;
+  border-radius: 7px;
+  background: rgba(99, 102, 241, 0.12);
+  color: #a5b4fc;
+}
+
+.cta-floating span {
+  display: block;
+}
+
+.cta-floating span > span,
+.cta-floating small {
+  display: block;
+  color: #475569;
+  font-size: 6px;
+}
+
+.cta-floating strong {
+  display: block;
+  margin-top: 3px;
+  color: #cbd5e1;
+  font-size: 8px;
+}
+
+.cta-floating-bottom > svg {
+  color: #4ade80;
+}
+
+.cta-floating-bottom strong {
+  color: #4ade80;
+  font-size: 10px;
+}
+
+.cta-floating-bottom small {
+  margin-top: 2px;
+}
+
+/* --------------------------------
+   DECORATIVE CORE
+-------------------------------- */
+
+.cta-core {
+  position: absolute;
+  top: 17%;
+  left: 12%;
+  width: 65px;
+  height: 65px;
+}
+
+.cta-core-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(129, 140, 248, 0.15);
+  border-radius: 50%;
+}
+
+.cta-core .ring-one {
+  animation: ctaRotate 9s linear infinite;
+}
+
+.cta-core .ring-two {
+  inset: -12px;
+  border-style: dashed;
+  animation: ctaRotateReverse 13s linear infinite;
+}
+
+.cta-core-center {
+  position: absolute;
+  inset: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(129, 140, 248, 0.3);
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.08);
+  color: #818cf8;
+}
+
+/* --------------------------------
+   BOTTOM
+-------------------------------- */
+
+.cta-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 10px 0;
+}
+
+.cta-bottom-line {
+  position: absolute;
+  width: 0;
+}
+
+.cta-bottom p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.cta-bottom p strong {
+  color: #0f172a;
+}
+
+.cta-bottom-mark {
+  color: #0f172a;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 1.5px;
+}
+
+.cta-bottom-mark span {
+  display: block;
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* --------------------------------
+   ANIMATIONS
+-------------------------------- */
+
+@keyframes ctaCardFloat {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(-2deg);
+  }
+
+  50% {
+    transform: translate(-50%, calc(-50% - 9px)) rotate(-1deg);
+  }
+}
+
+@keyframes ctaFloatTop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes ctaFloatBottom {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes ctaDrawChart {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes ctaPointPulse {
+  0%,
+  100% {
+    r: 5;
+  }
+
+  50% {
+    r: 7;
+  }
+}
+
+@keyframes ctaDotPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.75);
+  }
+}
+
+@keyframes ctaRotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ctaRotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+/* --------------------------------
+   TABLET
+-------------------------------- */
+
+@media (max-width: 1000px) {
+  .cta-main {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-content {
+    padding: 65px 55px 35px;
+  }
+
+  .cta-visual {
+    min-height: 580px;
+  }
+
+  .cta-intelligence {
+    width: min(510px, 72%);
+  }
+}
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 650px) {
+  .cta-section {
+    padding: 100px 0 40px;
+  }
+
+  .cta-container {
+    width: calc(100% - 32px);
+  }
+
+  .cta-main {
+    min-height: auto;
+    border-radius: 24px;
+  }
+
+  .cta-content {
+    padding: 45px 25px 20px;
+  }
+
+  .cta-content h2 {
+    font-size: 43px;
+    letter-spacing: -3px;
+  }
+
+  .cta-content > p {
+    font-size: 13px;
+  }
+
+  .cta-actions {
+    flex-wrap: wrap;
+  }
+
+  .cta-trust {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta-visual {
+    min-height: 490px;
+  }
+
+  .cta-intelligence {
+    width: 88%;
+    padding: 16px;
+  }
+
+  .cta-score strong {
+    font-size: 30px;
+  }
+
+  .cta-floating-top {
+    top: 10%;
+    right: 1%;
+    transform: scale(0.8);
+  }
+
+  .cta-floating-bottom {
+    bottom: 10%;
+    left: 1%;
+    transform: scale(0.8);
+  }
+
+  .cta-core {
+    top: 5%;
+    left: 4%;
+    transform: scale(0.7);
+  }
+
+  .cta-bottom {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 5px 0;
+  }
+}
