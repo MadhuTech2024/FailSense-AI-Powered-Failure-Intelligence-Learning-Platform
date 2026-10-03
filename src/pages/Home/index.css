@@ -1,0 +1,9 @@
+.home-page {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #f8fafc;
+}
+
+.home-page main {
+  overflow: hidden;
+}
